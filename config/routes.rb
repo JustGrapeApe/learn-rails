@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  # af 10/23/2015 added for learn-rails
+    root to: 'visitors#new'
+  #end of add
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # af 10/23/2015 
 # may need therubyracer for java.... maybe not, let's see
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -47,6 +47,7 @@ gem 'foundation-rails'
 gem 'gibbon'
 gem 'high_voltage'
 gem 'simple_form'
+gem 'figaro'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

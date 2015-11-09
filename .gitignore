@@ -16,5 +16,8 @@
 !/log/.keep
 /tmp
 
+# Ignore .odt lock file for notes
+/lib/.~lock.*
+
 # Ignore application configuration
 /config/application.yml

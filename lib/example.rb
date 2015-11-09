@@ -1,6 +1,10 @@
 class Example < Object
 
   # This is a comment.
+  #this file is for illustrative and learning purposes, it has nothing to do with 
+  #the application in which you may find it.
+  # The tutorial suggested that this file be removed.  I kind of like the example
+  # and kept it around.
 
   attr_accessor :honorific
   attr_accessor :name

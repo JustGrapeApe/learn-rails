@@ -47,7 +47,7 @@ gem 'foundation-rails'
 gem 'gibbon'
 gem 'high_voltage'
 gem 'simple_form'
-gem 'figaro'
+#gem 'figaro'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'

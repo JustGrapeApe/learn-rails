@@ -5,6 +5,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "Learn Rails" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Learn Rails" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%# Modernizr is required for Zurb Foundation %>
+    <%= javascript_include_tag 'vendor/modernizr' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
@@ -13,13 +15,20 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+       <button class="large warning button">Warning Order Now</button>
+       <button class="large alert button">alert Order Now</button>
+       <button class="large notice button">notice Order Now</button>
+       <button class="small warning button">small Warning</button>
     </main>
-
-    <footer> <!awf added 11/12/15 >
-      <p>This is a footer
-      Copyright BleuFedora Enterprises, 2015</p>
+    <footer class="row"> 
+      <section class="small-12 medium-4 columns">
+        Copyright 2014
+      </section>
+      <section class="small-12 medium-8 columns">
+        All rights reserved.
+      </section>
     </footer>
   </body>
 </html>

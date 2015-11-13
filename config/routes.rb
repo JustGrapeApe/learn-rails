@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # af 10/23/2015 added for learn-rails
+    post 'contact', to: 'contacts#process_form'
     root to: 'visitors#new'
   #end of add
 

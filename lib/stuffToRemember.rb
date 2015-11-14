@@ -1,5 +1,12 @@
 ## experimental stuff to remember as I go through the tutorial and delete/add stuff
 
+#git push -u origin master #set up to have github sticky
+#git push origin master
+#git push
+#git log --oneline
+
+
+
 #From layouts/application.html.erb
 
 #I played with the buttons, adding a couple
@@ -37,3 +44,27 @@
 		# rails doesn use warning, stick with notice and alert
 		render 'visitors/new'  #this render is normally 'hidden' (convention over coding), i put this in to remind me
 	end
+
+# first try at pages/contact.htm.erb... pages, the place to put html/erb files that the 
+# high_voltage gem takes care  of routing/controller
+<% content_for :title do %>Contact<% end %>
+<h3>Contact</h3>
+<div class="form">
+  <%= simple_form_for :contact, url: contact_path do |form| %>
+    <%= form.input :name, autofocus: true %>
+    <%= form.input :email %>
+    <%= form.input :content, as: :text %>
+    <%= form.button :submit, 'Submit', class: 'submit' %>
+  <% end %>
+</div>
+
+#obsolete app/controller/contacts_controller.rb
+class ContactsController < ApplicationController
+
+  def process_form
+    #Rails.logger.debug "DEBUG: parms are #{params}"
+    flash[:notice] = "Received request from #{params[:contact][:name]}"
+    redirect_to root_path
+  end
+end
+

@@ -45,6 +45,7 @@
 		render 'visitors/new'  #this render is normally 'hidden' (convention over coding), i put this in to remind me
 	end
 
+#
 # first try at pages/contact.htm.erb... pages, the place to put html/erb files that the 
 # high_voltage gem takes care  of routing/controller
 <% content_for :title do %>Contact<% end %>
@@ -67,4 +68,17 @@ class ContactsController < ApplicationController
     redirect_to root_path
   end
 end
+
+#obsolete config/routes.rb entry
+Rails.application.routes.draw do
+  # af 10/23/2015 added for learn-rails
+    post 'contact', to: 'contacts#process_form'
+    root to: 'visitors#new'
+  #end of add
+
+#obsolete navigation links
+<%# add navigation links to this file %>
+<li><%= link_to 'About', page_path('about') %></li>
+<li><%= link_to 'Contact', page_path('contact') %></li>
+
 

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # af 10/23/2015 added for learn-rails
-    post 'contact', to: 'contacts#process_form'
+  # af 11/14/2015 updated for learn-rails
+    resources :contacts, only: [:new, :create]
     root to: 'visitors#new'
   #end of add
 

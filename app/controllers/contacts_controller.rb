@@ -1,4 +1,4 @@
-class Contact Controller < ApplicationController
+class ContactsController < ApplicationController
    def new
    	@contact = Contact.new
    end
@@ -16,7 +16,8 @@ class Contact Controller < ApplicationController
 
    private
    def secure_params
-   	params.require(:contact).permit(:name, "email, "content)
+   	params.require(:contact).permit(:name, :email, :content)
    end
-   
+
  end
+

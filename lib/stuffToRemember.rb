@@ -1,9 +1,15 @@
 ## experimental stuff to remember as I go through the tutorial and delete/add stuff
 
-#git push -u origin master #set up to have github sticky
-#git push origin master
-#git push
-#git log --oneline
+# are just comments since this is in a .rb file
+# git add -A
+# git commit -m "message"
+# git push -u origin master #set up to have github sticky
+# git push origin master
+# git push
+# git log --oneline
+# git status
+
+# bundle install --without production
 
 #http://www.google.com/accounts/DisplayUnlockCaptcha
 #https://support.google.com/accounts/answer/6010255

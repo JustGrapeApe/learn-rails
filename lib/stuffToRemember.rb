@@ -8,6 +8,7 @@
 # git push
 # git log --oneline
 # git status
+# git config --get user.email
 
 # bundle install --without production
 

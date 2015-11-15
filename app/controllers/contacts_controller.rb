@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
                   # a security setting in Google My Account 
 
                    UserMailer.contact_email(@contact).deliver_now
-   		flash[:notice] = "Message xxx sent from #{@contact.name}."
+   		flash[:notice] = "Message sent from #{@contact.name}."
    		redirect_to root_path
    	else
    		render :new

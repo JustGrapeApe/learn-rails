@@ -7,7 +7,12 @@ class ContactsController < ApplicationController
    	@contact = Contact.new(secure_params)
    	if @contact.valid?
    		#TODO  send message
-   		flash[:notice] = "Message sent from #{@contact.name}."
+                   flash[:alert]  = "GMAIL USERNAME: #{ENV['GMAIL_USERNAME']}"
+                   flash[:warning]  = "GMAIL PASSWORD: #{ENV['GMAIL_PASSWORD']}"
+
+                   UserMailer.contact_email(@contact).deliver_now
+
+   		flash[:notice] = "Message xxx sent from #{@contact.name}."
    		redirect_to root_path
    	else
    		render :new

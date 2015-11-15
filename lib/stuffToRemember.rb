@@ -5,7 +5,8 @@
 #git push
 #git log --oneline
 
-
+#http://www.google.com/accounts/DisplayUnlockCaptcha
+#https://support.google.com/accounts/answer/6010255
 
 #From layouts/application.html.erb
 
@@ -81,4 +82,18 @@ Rails.application.routes.draw do
 <li><%= link_to 'About', page_path('about') %></li>
 <li><%= link_to 'Contact', page_path('contact') %></li>
 
+#config issues
+export GMAIL_USERNAME="ad6ve1@gmail.com"
+export GMAIL_PASSWORD="AD6Ve3#!"
+export MAILCHIMP_API_KEY="5caf448b4bae5064697dbd3359471be4-us12"
+export MAILCHIMP_LIST_ID="learn-rails"
+export OWNER_EMAIL="al@afedor.com"
+export SALT="1*e#49A5f"
 
+
+#
+DEPRECATION WARNING: `#deliver` is deprecated and will be removed in Rails 5. Use 
+`#deliver_now` to deliver immediately or `#deliver_later` to deliver through 
+Active Job. (called from create at /media/al/XFERVOL/workspace/learn-rails/app/controllers/contacts_controller.
+       rb:13)
+ 

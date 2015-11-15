@@ -6,12 +6,13 @@ class ContactsController < ApplicationController
    def create
    	@contact = Contact.new(secure_params)
    	if @contact.valid?
-   		#TODO  send message
-                   flash[:alert]  = "GMAIL USERNAME: #{ENV['GMAIL_USERNAME']}"
-                   flash[:warning]  = "GMAIL PASSWORD: #{ENV['GMAIL_PASSWORD']}"
+
+                  #relax Google security to get this app to work
+                  #http://www.google.com/accounts/DisplayUnlockCaptcha
+                  #https://support.google.com/accounts/answer/6010255
+                  # a security setting in Google My Account 
 
                    UserMailer.contact_email(@contact).deliver_now
-
    		flash[:notice] = "Message xxx sent from #{@contact.name}."
    		redirect_to root_path
    	else

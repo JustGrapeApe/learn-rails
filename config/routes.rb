@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   # af 11/14/2015 updated for learn-rails
     resources :contacts, only: [:new, :create]
-    root to: 'visitors#new'
+    resources :visitors, only:[:new, :create]
+    root to: 'visitors#new'  #this should be last, as "default"
   #end of add
 
   # The priority is based upon order of creation: first created -> highest priority.

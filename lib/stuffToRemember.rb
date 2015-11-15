@@ -86,7 +86,7 @@ Rails.application.routes.draw do
 export GMAIL_USERNAME="ad6ve1@gmail.com"
 export GMAIL_PASSWORD="AD6Ve3#!"
 export MAILCHIMP_API_KEY="5caf448b4bae5064697dbd3359471be4-us12"
-export MAILCHIMP_LIST_ID="learn-rails"
+export MAILCHIMP_LIST_ID="l"
 export OWNER_EMAIL="al@afedor.com"
 export SALT="1*e#49A5f"
 

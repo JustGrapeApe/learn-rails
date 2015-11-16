@@ -6,6 +6,7 @@
 # git push -u origin master #set up to have github sticky
 # git push origin master
 # git push
+# git push heroku master
 # git log --oneline
 # git status
 # git config --get user.email
